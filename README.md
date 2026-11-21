@@ -1,2 +1,3 @@
-# Discord-for-College-Desktop-App-Version
-Website Tutorial for Discord, coded and uploaded to Github to host the site. [Incomplete]
+ENC 4265 Project 2 - Website Tutorial Option
+
+Chosen App/Software: Discord Desktop App
