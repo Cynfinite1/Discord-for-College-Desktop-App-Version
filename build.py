@@ -135,9 +135,9 @@ MEDIA = {
     '3.2.5': 'The Join a Server button at the bottom of the Create Your Server window',
     '3.2.6': 'Pasting the link into the Invite Link box',
     '3.2.7': 'The Join Server button',
-    '3.3.1': 'Starting from the Discord window',
+    '3.3.1': 'Your profile (the cat avatar) in the member list on the right side of the server',
     '3.3.2': 'The Edit Profile button and the Edit Per-server Profile option',
-    '3.3.3': 'Typing a nickname in the Display Name box',
+    '3.3.3': 'The nickname under your avatar on your per-server profile',
     '3.3.4': 'The Save button at the bottom of the window',
     '4.1.1': 'The server list on the far left',
     '4.1.2': 'The channel list',
@@ -297,7 +297,7 @@ MEDIA = {
     '9.2.1': 'A category name in the channel list with an arrow pointing right',
     '9.2.2': 'The server name at the top of the channel list',
     '9.2.3': 'The Hide Muted Channels check box in the server menu',
-    '9.2.4': 'Right-clicking the greyed out channel',
+    '9.2.4': 'Right-clicking the grayed-out channel',
     '9.2.5': 'Unmute Channel in the right-click menu',
     '9.2.6': 'The name in the user panel',
     '9.2.7': 'The plus button (Add a Server) in the server list',
@@ -342,7 +342,7 @@ def number_media(body, num):
 
 
 def steps(*items):
-    """Numbered steps. Every step gets its own media spot: step text on the left, media on the right."""
+    """Numbered steps. Every step gets its own media spot: step text first, media centered below it."""
     out = []
     for it in items:
         text = it[0] if isinstance(it, tuple) else it
@@ -418,7 +418,7 @@ SECTIONS = [
         ('7.2', 'screen-share.html', 'Sharing Your Screen', 'Present one window or your entire screen.'),
         ('7.3', 'meeting-etiquette.html', 'Meeting Etiquette for Group Projects', 'Habits that keep group calls smooth.'),
     ]),
-    ('8', 'conclusion.html', 'Conclusion and Next Steps', 'Review what you learned and keep going.', [
+    ('8', 'conclusion.html', 'Next Steps', 'Review what you learned and keep going.', [
         ('8.1', 'checklist.html', 'Quick-Start Checklist', 'The core skills in one list.'),
         ('8.2', 'beyond.html', 'Beyond Your Group Project', 'Using Discord for clubs and future classes.'),
     ]),
@@ -456,6 +456,12 @@ def sidebar(current):
     return '<ul class="toc-list">' + ''.join(out) + '</ul>'
 
 
+def numlabel(n):
+    if not n:
+        return ''
+    return (n + '. ') if '.' not in n else (n + ' ')
+
+
 def page(filename, body, description, draft=False):
     idx = next(i for i, o in enumerate(ORDER) if o[1] == filename)
     num, _, title, parent = ORDER[idx]
@@ -470,11 +476,11 @@ def page(filename, body, description, draft=False):
     label = f'Section {num}' if parent is None else f'Subsection {num}'
     pager = '<nav class="pager" aria-label="Previous and next pages">'
     if prev:
-        pager += f'<a class="prev" href="{prev[1]}"><small>Previous</small><span>{(prev[0] + " ") if prev[0] else ""}{prev[2]}</span></a>'
+        pager += f'<a class="prev" href="{prev[1]}"><small>Previous</small><span>{numlabel(prev[0])}{prev[2]}</span></a>'
     else:
         pager += '<span></span>'
     if nxt:
-        pager += f'<a class="next" href="{nxt[1]}"><small>Next</small><span>{nxt[0]} {nxt[2]}</span></a>'
+        pager += f'<a class="next" href="{nxt[1]}"><small>Next</small><span>{numlabel(nxt[0])}{nxt[2]}</span></a>'
     pager += '</nav>'
     draft_banner = (f'<p class="draft">This {"section" if parent is None else "subsection"} is unfinished.</p>'
                     if draft else '')
@@ -560,7 +566,6 @@ PAGES['index.html'] = ('Learn what Discord is and why your class or group uses i
 
 <h2>Start here</h2>
 <p>Start with <a href="about-this-tutorial.html">Section 1: About This Tutorial</a>, or go straight to <a href="getting-started.html">Section 2: Creating Your Account</a> if you are ready to install Discord.</p>
-<p><a class="start-btn" href="about-this-tutorial.html">Begin Tutorial</a></p>
 ''')
 
 PAGES['about-this-tutorial.html'] = ('What this tutorial teaches and what you need before you begin.', f'''
@@ -579,7 +584,7 @@ PAGES['about-this-tutorial.html'] = ('What this tutorial teaches and what you ne
 
 <h2>Before you begin</h2>
 <table class="facts">
-  <tr><th scope="row">Skill level</th><td>You only need to be comfortable with email, a web browser and messaging apps.</td></tr>
+  <tr><th scope="row">Skill level</th><td>You only need to be comfortable with email, a web browser, and messaging apps.</td></tr>
   <tr><th scope="row">You need</th><td>A Windows 10 or 11 PC, an internet connection, and an email address you can access</td></tr>
   <tr><th scope="row">Voice/Video Calls</th><td>A microphone and speakers or headphones. A webcam is optional.</td></tr>
   <tr><th scope="row">Time</th><td>About 10–30 minutes per section. Some sections are longer than others.</td></tr>
@@ -622,7 +627,7 @@ PAGES['how-to-use.html'] = ('How the pages, numbered steps, notes, cautions, and
 
 <h2>Keep the tutorial and Discord side by side</h2>
 <p>Open this tutorial in your web browser on one half of your screen and the Discord app on the other half. You can then read a step and complete it without switching windows.</p>
-{note('Complete <a href="download-app.html">Section 2.1</a> first if you have not installed Discord yet.')}
+{note('Complete <a href="download-app.html">Subsection 2.1</a> first if you have not installed Discord yet.')}
 {steps(
     'Open this tutorial in your web browser.',
     f'Press {kbd("Windows key")} + {kbd("Left Arrow")} to move the browser to the left half of the screen.',
@@ -634,7 +639,7 @@ PAGES['how-to-use.html'] = ('How the pages, numbered steps, notes, cautions, and
 <ul>
   <li><strong>Numbered steps</strong> tell you one action at a time. Complete them in order.</li>
   <li><strong>Bold words</strong> such as {ui('Continue')} match the buttons and menu names on your screen.</li>
-  <li><strong>Pictures</strong> appear next to each step they show. Click a picture to open it in a new tab for easier viewing.</li>
+  <li><strong>Pictures</strong> appear below each step they show. Click a picture to open it in a new tab for easier viewing.</li>
   <li><strong>Blue words</strong>, such as {T('server')}, are new words. Point to them to see the definition.</li>
 </ul>
 
@@ -722,15 +727,15 @@ PAGES['profile-settings.html'] = ('Add an avatar and pronouns, switch Discord to
 <p>Your {T('avatar')} appears next to every message you send. A clear photo of your face or a simple image helps teammates match your messages to you. Adding your pronouns helps teammates know how to refer to you.</p>
 {steps(
     f'In User Settings, click {ui("Edit Profiles")}.',
-    f'Click on your {ui("Avatar")}, and then click the {ui("Change Avatar")} button.',
+    f'Click your {ui("Avatar")}, and then click the {ui("Change Avatar")} button.',
     f'Click {ui("Upload Image")}.',
     'Choose a picture from your computer.',
     'Drag the picture or use the buttons below to adjust the crop.',
     f'Click {ui("Apply")}.',
-    f'Click {ui("Save Changes")} at the bottom of the window.',
+    f'Click {ui("Save")} at the bottom of the window.',
     f'Click the area that says {ui("Add pronouns")}, next to your username.',
     'Type your preferred pronouns, such as <strong>He/Him</strong>.',
-    f'Click {ui("Save Changes")}.',
+    f'Click {ui("Save")}.',
 )}
 {result('Your new picture appears in the bottom-left corner next to your name, and your pronouns appear on your profile card.')}
 
@@ -812,8 +817,8 @@ PAGES['server-nickname.html'] = ('Set a server nickname so you use your full nam
 {steps(
     'Click your profile in the member list.',
     f'Click {ui("Edit Profile")}, and then click {ui("Edit Per-server Profile")}.',
-    f'Type your nickname in the {ui("Display Name")} box.',
-    f'Click {ui("Save Changes")}.',
+    'Type your nickname in the name box under your avatar.',
+    f'Click {ui("Save")}.',
 )}
 {result('Your new nickname appears next to your messages in this server. Your name in all other servers stays the same.')}
 
@@ -1166,7 +1171,7 @@ STEPS = {
 {result("Discord's safety team receives the report. The person is not told who reported them.")}
 ''',
     ('privacy-security.html', 'Account Security'): f'''
-<p>{T('two-factor authentication')} (2FA) asks for a code from your phone every time you log in on a new device, so a stolen password alone cannot open your account.</p>
+<p>{T('two-factor authentication', 'Two-factor authentication')} (2FA) asks for a code from your phone every time you log in on a new device, so a stolen password alone cannot open your account.</p>
 <h3>Turn on two-factor authentication</h3>
 {steps(
     'On your phone, install a free authenticator app, such as Google Authenticator or Authy.',
@@ -1311,7 +1316,7 @@ STEPS = {
     f'If a {T("category")} name in the channel list has an arrow pointing right, click the name to show the channels under it.',
     'Click the server name at the top of the channel list.',
     f'If {ui("Hide Muted Channels")} is checked, click it to show muted channels again.',
-    'Right click the greyed out channel.',
+    'Right-click the grayed-out channel.',
     f'Click {ui("Unmute Channel")}.',
 )}
 {result('The channel appears in your channel list.')}
@@ -1337,7 +1342,7 @@ STEPS = {
     'Open the window that shows the problem.',
     f'Press {kbd("Windows")} + {kbd("Shift")} + {kbd("S")}, and then drag a box around the part of the screen that shows the problem. Windows copies the screenshot.',
     'Open the channel your server uses for questions, such as <strong>#help</strong> or <strong>#questions</strong>. If there is none, use the main chat channel.',
-    'Type a short description: what you were trying to do, what happened, and what you already tried. For example: "I cannot hear anyone in Meeting Room. I already checked my Input/Output Device and my headphones are not deafened."',
+    'Type a short description: what you were trying to do, what happened, and what you already tried. For example: "I cannot hear anyone in Meeting Room. I already checked my Input/Output Device, and my headphones are not deafened."',
     f'Press {kbd("Ctrl")} + {kbd("V")} to add your screenshot to the message.',
     f'Press {kbd("Enter")}.',
     'When the problem is fixed, reply to say what worked, so the next person with the same problem can find the answer.',
@@ -1454,7 +1459,7 @@ PAGES['glossary.html'] = ('Plain-language definitions of every new Discord word 
 ''')
 
 PAGES['final-conclusion.html'] = ('Congratulations on finishing the tutorial, plus official Discord help links for later.', f'''
-<p class="lead">Congratulations. You finished {TITLE}, and you are ready to use Discord with your class or group.</p>
+<p class="lead">Congratulations, you've reached the end of this tutorial, and you are ready to use Discord with your class or group.</p>
 <p>You can now create an account, join your group's server, find the right channels, send messages and files, control your notifications and privacy, join voice meetings, share your screen, and fix common problems on your own.</p>
 
 <h2>More information in this tutorial</h2>
@@ -1481,9 +1486,10 @@ PAGES['final-conclusion.html'] = ('Congratulations on finishing the tutorial, pl
 
 PAGES['credits.html'] = ('The sources and tools used to make this tutorial.', '''
 <ul>
-  <li><a href="https://support.discord.com">Discord Help Center</a> was used to check features and button names.</li>
-  <li>Screenshots are original and were captured and annotated by Sebastian Foster with Windows Snipping Tool and Google Drawings.</li>
-  <li>Discord Dark theme obtained by copying hex codes from the appearance settings in the app.</li>
+  <li><a href="https://support.discord.com">Discord Help Center</a> was used to verify any recent changes in button names, menus, or UIs.</li>
+  <li>Both Discord accounts were made and used by Sebastian Foster for steps that require another user.</li>
+  <li>Screenshots are original and were captured and annotated by Sebastian Foster with the Windows Snipping Tool and Google Drawings.</li>
+  <li>The Discord Dark theme colors were obtained by copying hex codes from the appearance settings in the app.</li>
 </ul>
 ''')
 

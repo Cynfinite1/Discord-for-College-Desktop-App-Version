@@ -48,11 +48,11 @@ img, video { max-width: 100%; height: auto; display: block; border-radius: 6px; 
   padding: 1.1rem .9rem 2rem 1rem;
   scrollbar-width: thin; scrollbar-color: #4e5058 transparent;
 }
-.brand { display: flex; align-items: center; gap: .65rem; text-decoration: none; color: var(--strong); font-weight: 800; font-size: 1.05rem; line-height: 1.2; margin-bottom: 1.1rem; }
+.brand { display: flex; align-items: center; gap: .65rem; text-decoration: none; color: var(--heading); font-weight: 800; font-size: 1.05rem; line-height: 1.2; margin-bottom: 1.1rem; }
 .brand small { display: block; font-weight: 600; font-size: .78rem; color: var(--muted); }
 .brand-mark { width: 36px; height: 36px; flex: none; }
 .brand-mark img { width: 36px; height: 36px; border-radius: 50%; }
-.toc-title { font-size: 1.15rem; font-weight: 700; color: var(--strong); margin: 0 0 .5rem; padding-bottom: .5rem; border-bottom: 1px solid var(--border); }
+.toc-title { font-size: 1.15rem; font-weight: 700; color: var(--heading); margin: 0 0 .5rem; padding-bottom: .5rem; border-bottom: 1px solid var(--border); }
 .toc-list, .toc-list ul { list-style: none; margin: 0; padding: 0; }
 .toc-list > li { margin-top: .35rem; }
 .toc-list ul { margin: .1rem 0 .2rem; }
@@ -206,3 +206,9 @@ a.media-frame:hover { border-color: var(--blurple); }
 
 /* Help link list (Section 10) */
 .link-list li { margin: .45rem 0; }
+
+/* Images sit below each step, centered like the figures in 4.1 */
+.steps-grid > li { display: block; }
+.steps-grid .step-media { margin-top: .8rem; }
+.steps-grid .media { margin: 0 auto .3rem; max-width: 720px; }
+.pager a span { color: var(--heading); }
