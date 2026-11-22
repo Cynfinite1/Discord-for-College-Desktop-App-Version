@@ -542,6 +542,7 @@ PAGES = {}
 # ===========================================================================
 PAGES['index.html'] = ('Learn what Discord is and why your class or group uses it, then learn the Discord desktop app one short section at a time.', f'''
 <h1 class="home-title">{TITLE}</h1>
+<p class="home-author">By Sebastian Foster</p>
 <p class="lead"><a href="https://discord.com">Discord</a> is a free app that keeps a group's messages, files, and meetings in one place. This page explains how Discord is organized and why your group chose it.</p>
 
 <h2>What Discord does</h2>
@@ -1090,8 +1091,8 @@ SCAFFOLD = {
     'meeting-etiquette.html': [('Before the Call', 'text'), ('During the Call', 'text')],
     'checklist.html': [('Core Skills Checklist', 'text')],
     'beyond.html': [('Student Organizations and Future Classes', 'text')],
-    'audio-video-problems.html': [('Others Cannot Hear Me', 'steps'), ('I Cannot Hear Others', 'steps'), ('My Camera Will Not Turn On', 'steps')],
-    'channel-invite-problems.html': [('I Cannot See a Channel', 'steps'), ('An Invite Link Does Not Work', 'steps')],
+    'audio-video-problems.html': [('Others Cannot Hear You', 'steps'), ('You Cannot Hear Others', 'steps'), ('Your Camera Will Not Turn On', 'steps')],
+    'channel-invite-problems.html': [('You Cannot See a Channel', 'steps'), ('An Invite Link Does Not Work', 'steps')],
     'getting-help.html': [('Asking Your Server for Help', 'steps')],
 }
 # Written steps for the subsections in Sections 6, 7, and 9. Any heading not listed
@@ -1240,7 +1241,7 @@ STEPS = {
 {note(f'Clicking {ui("Disconnect")} also stops your share, but it removes you from the call.')}
 ''',
     # ---------------- 9.1 Audio and Video Problems ----------------
-    ('audio-video-problems.html', 'Others Cannot Hear Me'): f'''
+    ('audio-video-problems.html', 'Others Cannot Hear You'): f'''
 <p>Work through these steps in order. Stop as soon as your group can hear you.</p>
 {steps(
     'If the microphone button in the user panel has a red line through it, click it to unmute yourself.',
@@ -1267,7 +1268,7 @@ STEPS = {
 {result('Your group can hear you, and a green ring appears around your picture when you talk.')}
 {note('If you run the Mic Test while you are in a voice channel, Discord mutes and deafens you until you click Stop Testing.')}
 ''',
-    ('audio-video-problems.html', 'I Cannot Hear Others'): f'''
+    ('audio-video-problems.html', 'You Cannot Hear Others'): f'''
 {steps(
     'If the headphone button in the user panel has a red line through it, click it.',
     "Right-click a teammate's name under the voice channel.",
@@ -1283,7 +1284,7 @@ STEPS = {
 )}
 {result('You can hear your teammates in the voice channel.')}
 ''',
-    ('audio-video-problems.html', 'My Camera Will Not Turn On'): f'''
+    ('audio-video-problems.html', 'Your Camera Will Not Turn On'): f'''
 {steps(
     'Close other apps that may be using your camera, such as Zoom, Microsoft Teams, or the Windows Camera app.',
     GEAR,
@@ -1311,7 +1312,7 @@ STEPS = {
 {caution('Clicking the X at the top-right of the Discord window does not fully close the app. Discord keeps running in the notification area, so use Quit Discord when a restart is needed.')}
 ''',
     # ---------------- 9.2 Channel and Invite Problems ----------------
-    ('channel-invite-problems.html', 'I Cannot See a Channel'): f'''
+    ('channel-invite-problems.html', 'You Cannot See a Channel'): f'''
 {steps(
     f'If a {T("category")} name in the channel list has an arrow pointing right, click the name to show the channels under it.',
     'Click the server name at the top of the channel list.',
@@ -1485,6 +1486,7 @@ PAGES['final-conclusion.html'] = ('Congratulations on finishing the tutorial, pl
 ''')
 
 PAGES['credits.html'] = ('The sources and tools used to make this tutorial.', '''
+<p class="lead">This page lists the sources, tools, and accounts used to create this tutorial.</p>
 <ul>
   <li><a href="https://support.discord.com">Discord Help Center</a> was used to verify any recent changes in button names, menus, or UIs.</li>
   <li>Both Discord accounts were made and used by Sebastian Foster for steps that require another user.</li>

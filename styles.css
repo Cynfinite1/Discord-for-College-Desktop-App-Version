@@ -212,3 +212,11 @@ a.media-frame:hover { border-color: var(--blurple); }
 .steps-grid .step-media { margin-top: .8rem; }
 .steps-grid .media { margin: 0 auto .3rem; max-width: 720px; }
 .pager a span { color: var(--heading); }
+
+/* Author line under the homepage title */
+.home-author { text-align: center; color: var(--muted); font-size: 1.05rem; font-weight: 600; margin: -.6rem 0 1.6rem; }
+/* Alternating table rows */
+.facts tr:nth-child(even) { background: rgba(255, 255, 255, .045); }
+/* Heading hierarchy: h1 brightest, h2 a softer green, h3 off-white */
+h2 { color: #4fbf78; }
+h3 { color: var(--strong); }
