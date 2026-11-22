@@ -88,10 +88,10 @@ def media(todo, small=False):
 
 # Alt text for media that is ready, keyed by label (subsection number + position)
 MEDIA = {
-    '1.3.1': 'This tutorial open in a web browser',
-    '1.3.2': 'The web browser moved to the left half of the screen',
-    '1.3.3': 'Opening the Discord app from the taskbar',
-    '1.3.4': 'This tutorial open in a web browser on the left half of the screen and Discord open on the right half',
+    '1.2.1': 'This tutorial open in a web browser',
+    '1.2.2': 'The web browser moved to the left half of the screen',
+    '1.2.3': 'Opening the Discord app from the taskbar',
+    '1.2.4': 'This tutorial open in a web browser on the left half of the screen and Discord open on the right half',
     '2.1.1': 'Typing discord.com/download into the web browser address bar',
     '2.1.2': 'The Download for Windows button on the Discord download page',
     '2.1.3': 'The DiscordSetup.exe file in the Downloads folder',
@@ -199,6 +199,120 @@ MEDIA = {
     '5.4.9': 'Typing has: in the Search box',
     '5.4.10': 'The has: file filter in the Search box after clicking file in the list',
     '5.4.11': 'The search result with the message that includes the file after pressing Enter',
+    '6.1.1': 'Right-clicking the server icon in the server list',
+    '6.1.2': 'Notification Settings in the server menu',
+    '6.1.3': 'Only @mentions selected under Notification Settings',
+    '6.1.4': 'The Suppress @everyone and @here switch turned on',
+    '6.1.5': 'Right-clicking the server icon in the server list',
+    '6.1.6': 'Pointing to Mute Server in the server menu',
+    '6.1.7': 'For 1 Hour in the Mute Server menu',
+    '6.1.8': 'Your picture in the user panel at the bottom-left of the window',
+    '6.1.9': 'Your current status, Online, in the profile menu',
+    '6.1.10': 'Pointing to Do Not Disturb in the status menu',
+    '6.1.11': 'For 1 Hour in the Do Not Disturb menu',
+    '6.2.1': 'The gear icon (User Settings) in the user panel',
+    '6.2.2': 'Messaging Permissions in the list on the left of User Settings',
+    '6.2.3': 'The All servers menu under Direct Message (DM) Permissions',
+    '6.2.4': 'The Direct Messages switch under Direct Message (DM) Permissions',
+    '6.2.5': 'The Yes button in the Server Privacy window',
+    '6.2.6': 'Friend Request Permissions in Messaging Permissions',
+    '6.2.7': 'The Everyone switch turned off under Allow Friend Requests from',
+    '6.2.8': 'The Server members switch turned off under Allow Friend Requests from',
+    '6.2.9': "Right-clicking a person's name in the Direct Messages list",
+    '6.2.10': 'Block in the right-click menu',
+    '6.2.11': 'The Block button in the Block window',
+    '6.2.12': 'Right-clicking the message you want to report',
+    '6.2.13': 'Report Message in the right-click menu',
+    '6.2.14': 'The list of reasons in the report window',
+    '6.2.15': 'The follow-up options in the report window',
+    '6.2.16': "Google Authenticator installed from the phone's app store",
+    '6.2.17': 'The gear icon (User Settings) in the user panel',
+    '6.2.18': 'Account in the list on the left of User Settings',
+    '6.2.19': 'Password & Security under Account in the list on the left',
+    '6.2.20': 'The Enable Authenticator App button under Multi-Factor Authentication',
+    '6.2.21': 'Finding the Google Authenticator app on the phone',
+    '6.2.22': 'The QR code to scan with the authenticator app, blurred for privacy',
+    '6.2.23': 'The 6-digit code from the authenticator app typed into Discord',
+    '6.2.24': 'The Activate button next to the 6-digit code',
+    '6.2.25': 'The Download Backup Codes button',
+    '7.1.1': 'The Meeting Room voice channel in the channel list',
+    '7.1.2': 'Voice Connected in green in the voice status panel',
+    '7.1.3': 'A green ring around the picture of the person who is talking',
+    '7.1.4': 'The microphone button in the user panel after muting',
+    '7.1.5': 'The microphone button in the user panel after unmuting',
+    '7.1.6': 'The Disconnect button (a phone icon) next to Voice Connected',
+    '7.1.7': 'Joined to the Meeting Room voice channel with members listed under it',
+    '7.1.8': 'The Video button (a camera icon) in the voice status panel',
+    '7.1.9': 'The camera preview in the Ready to video chat window',
+    '7.1.10': 'The Turn On Camera button in the preview window',
+    '7.2.1': 'Joined to the Meeting Room voice channel with members listed under it',
+    '7.2.2': 'Browser tabs to close before sharing your screen',
+    '7.2.3': 'The Share Your Screen button in the voice status panel',
+    '7.2.4': 'The Applications and Entire Screen tabs in the screen share window',
+    '7.2.5': 'Clicking the window to share',
+    '7.2.6': 'The Stop Streaming button in the voice status panel',
+    '9.1.1': 'The microphone button with a red line through it in the user panel',
+    '9.1.2': 'The headphone button with a red line through it in the user panel',
+    '9.1.3': 'The red server mute icons next to a name under the voice channel',
+    '9.1.4': 'The gear icon (User Settings) in the user panel',
+    '9.1.5': 'Voice & Video in the list on the left of User Settings',
+    '9.1.6': 'Voice under Voice & Video in the list on the left',
+    '9.1.7': 'The Microphone menu in the Voice settings',
+    '9.1.8': 'Choosing the microphone you are using from the Microphone menu',
+    '9.1.9': 'The Microphone Volume slider',
+    '9.1.10': 'The Push to Talk switch in the Voice settings',
+    '9.1.11': 'The Mic Test button',
+    '9.1.12': 'The Mic Test bar moving while you speak',
+    '9.1.13': 'The Stop Testing button',
+    '9.1.14': 'Windows Settings open after pressing Windows key + I',
+    '9.1.15': 'Privacy & security in the list on the left of Windows Settings',
+    '9.1.16': 'Microphone under App permissions in Privacy & security',
+    '9.1.17': 'The Let desktop apps access your microphone switch and the Discord switch',
+    '9.1.18': 'The headphone button with a red line through it in the user panel',
+    '9.1.19': "Right-clicking a teammate's name under the voice channel",
+    '9.1.20': 'The User Volume slider in the right-click menu',
+    '9.1.21': 'The Mute check box in the right-click menu',
+    '9.1.22': 'The gear icon (User Settings) in the user panel',
+    '9.1.23': 'Voice & Video in the list on the left of User Settings',
+    '9.1.24': 'The Speaker menu in the Voice settings',
+    '9.1.25': 'Choosing the speakers or headphones you are using from the Speaker menu',
+    '9.1.26': 'The Speaker Volume slider',
+    '9.1.27': 'The speaker icon at the bottom-right of the Windows taskbar',
+    '9.1.28': 'The Windows volume slider',
+    '9.1.29': 'Closing another app that may be using the camera',
+    '9.1.30': 'The gear icon (User Settings) in the user panel',
+    '9.1.31': 'Voice & Video in the list on the left of User Settings',
+    '9.1.32': 'Camera under Voice & Video in the list on the left',
+    '9.1.33': 'The Camera menu in the Camera settings',
+    '9.1.34': 'Choosing the camera you are using from the Camera menu',
+    '9.1.35': 'The Test Video button',
+    '9.1.36': 'Windows Settings open after pressing Windows key + I',
+    '9.1.37': 'Privacy & security in the list on the left of Windows Settings',
+    '9.1.38': 'The Camera page in Privacy & security',
+    '9.1.39': 'The Camera access switch',
+    '9.1.40': 'The Let desktop apps access your camera switch',
+    '9.1.41': 'Right-clicking the Discord icon in the Windows notification area',
+    '9.1.42': 'Quit Discord in the right-click menu',
+    '9.1.43': 'Opening Discord again from the Start menu',
+    '9.2.1': 'A category name in the channel list with an arrow pointing right',
+    '9.2.2': 'The server name at the top of the channel list',
+    '9.2.3': 'The Hide Muted Channels check box in the server menu',
+    '9.2.4': 'Right-clicking the greyed out channel',
+    '9.2.5': 'Unmute Channel in the right-click menu',
+    '9.2.6': 'The name in the user panel',
+    '9.2.7': 'The plus button (Add a Server) in the server list',
+    '9.2.8': 'The Join a Server button',
+    '9.2.9': 'The invite link pasted into the Invite Link box',
+    '9.2.10': 'The Join Server button',
+    '9.2.11': 'Asking the group for a new invite link that never expires',
+    '9.3.1': 'The pin icon at the top-right of the window',
+    '9.3.2': 'The window that shows the problem',
+    '9.3.3': 'The Windows Snipping Tool bar after pressing Windows key + Shift + S',
+    '9.3.4': 'The #help channel in the channel list',
+    '9.3.5': 'A short description of the problem typed in the message box',
+    '9.3.6': 'The screenshot added to the message after pressing Ctrl + V',
+    '9.3.7': 'The question and screenshot in the channel after pressing Enter',
+    '9.3.8': 'A reply that says what fixed the problem',
 }
 
 
@@ -270,10 +384,9 @@ def kbd(k):
 # Subsection: (number, file, title, summary)
 # ---------------------------------------------------------------------------
 SECTIONS = [
-    ('1', 'introduction.html', 'Introduction: What Discord Is and Why Your Group Uses It', 'What Discord is and why classes and clubs use it.', [
-        ('1.1', 'about-this-tutorial.html', 'About This Tutorial', 'What you will be able to do and what you need before you begin.'),
-        ('1.2', 'who-this-is-for.html', 'Who This Tutorial Is For', 'The skills, equipment, and time you need before you start.'),
-        ('1.3', 'how-to-use.html', 'How to Use This Tutorial', 'How the pages, steps, notes, and new words work.'),
+    ('1', 'about-this-tutorial.html', 'About This Tutorial', 'What you will be able to do and what you need before you begin.', [
+        ('1.1', 'who-this-is-for.html', 'Who This Tutorial Is For', 'The skills, equipment, and time you need before you start.'),
+        ('1.2', 'how-to-use.html', 'How to Use This Tutorial', 'How the pages, steps, notes, and new words work.'),
     ]),
     ('2', 'getting-started.html', 'Getting Started: Creating Your Account', 'Install Discord on your computer and create your account.', [
         ('2.1', 'download-app.html', 'Downloading the Desktop App', 'Install Discord on a Windows PC.'),
@@ -314,7 +427,9 @@ SECTIONS = [
         ('9.2', 'channel-invite-problems.html', 'Channel and Invite Problems', 'Fix missing channels and expired invites.'),
         ('9.3', 'getting-help.html', 'Getting More Help', 'Ask your server for help the right way.'),
     ]),
-    ('10', 'glossary.html', 'Glossary', 'Every new word in this tutorial, defined in plain language.', []),
+    ('10', 'final-conclusion.html', 'Conclusion', 'Congratulations, plus official Discord help links for later.', []),
+    ('11', 'glossary.html', 'Glossary', 'Every new word in this tutorial, defined in plain language.', []),
+    ('12', 'credits.html', 'Credits', 'The sources and tools used to make this tutorial.', []),
 ]
 
 # Flat reading order for previous / next links
@@ -326,7 +441,8 @@ for num, f, title, summ, subs in SECTIONS:
 
 
 def sidebar(current):
-    out = []
+    hcur = ' aria-current="page"' if current == 'index.html' else ''
+    out = [f'<li><a class="sec" href="index.html"{hcur}>Home</a></li>']
     for num, f, title, summ, subs in SECTIONS:
         cur = ' aria-current="page"' if f == current else ''
         out.append(f'<li><a class="sec" href="{f}"{cur}><span class="n">{num}.</span> {title}</a>')
@@ -418,19 +534,8 @@ PAGES = {}
 # ===========================================================================
 # SECTION 1  INTRODUCTION (homepage: What Discord Is)
 # ===========================================================================
-PAGES['index.html'] = ('A beginner tutorial for using the Discord desktop app on Windows for college classes and group projects.', f'''
-<div class="home-hero">
-  <img src="media/discord-logo.png" alt="Discord logo">
-  <h1>{TITLE}</h1>
-  <a class="start-btn" href="introduction.html">Begin Tutorial</a>
-</div>
-<section class="home-contents" aria-labelledby="contents-h">
-<h2 id="contents-h">Table of Contents</h2>
-<ul class="pathway">{''.join(f'<li><a href="{f}"><span class="n">{n}.</span> {t}</a><p>{sm}</p></li>' for n, f, t, sm, _ in SECTIONS)}</ul>
-</section>
-''')
-
-PAGES['introduction.html'] = ('Learn what Discord is and why your class or group uses it, then learn the Discord desktop app one short section at a time.', f'''
+PAGES['index.html'] = ('Learn what Discord is and why your class or group uses it, then learn the Discord desktop app one short section at a time.', f'''
+<h1 class="home-title">{TITLE}</h1>
 <p class="lead"><a href="https://discord.com">Discord</a> is a free app that keeps a group's messages, files, and meetings in one place. This page explains how Discord is organized and why your group chose it.</p>
 
 <h2>What Discord does</h2>
@@ -454,8 +559,8 @@ PAGES['introduction.html'] = ('Learn what Discord is and why your class or group
 {note('Discord is also popular for gaming, but you do not need any gaming experience. A school server only contains the channels your group creates.')}
 
 <h2>Start here</h2>
-<p>Read the three parts of this introduction first, or go straight to <a href="getting-started.html">Section 2: Creating Your Account</a> if you are ready to install Discord.</p>
-{overview('1')}
+<p>Start with <a href="about-this-tutorial.html">Section 1: About This Tutorial</a>, or go straight to <a href="getting-started.html">Section 2: Creating Your Account</a> if you are ready to install Discord.</p>
+<p><a class="start-btn" href="about-this-tutorial.html">Begin Tutorial</a></p>
 ''')
 
 PAGES['about-this-tutorial.html'] = ('What this tutorial teaches and what you need before you begin.', f'''
@@ -480,6 +585,8 @@ PAGES['about-this-tutorial.html'] = ('What this tutorial teaches and what you ne
   <tr><th scope="row">Time</th><td>About 10–30 minutes per section. Some sections are longer than others.</td></tr>
 </table>
 
+<h2>In this section</h2>
+{overview('1')}
 ''')
 
 PAGES['who-this-is-for.html'] = ('The audience, skills, equipment, and time this tutorial expects.', f'''
@@ -995,7 +1102,6 @@ STEPS = {
     f'Click {ui("Notification Settings")}.',
     f'Under {ui("Server Notification Settings")}, click {ui("Only @mentions")}.',
     f'If @everyone and @here messages interrupt you too often, turn on the {ui("Suppress @everyone and @here")} switch.',
-    f'Click {ui("Done")}.',
 )}
 {result('Discord notifies you only when someone mentions you by name, mentions one of your roles, or sends you a direct message. Other messages still appear as bold channel names, so you can catch up when you are ready.')}
 {note('These settings apply to one server at a time. Repeat the steps for each server you belong to.')}
@@ -1068,12 +1174,10 @@ STEPS = {
     f'Click {ui("Account")} in the list on the left.',
     f'Click {ui("Password &amp; Security")}.',
     f'Under {ui("Multi-Factor Authentication")}, click {ui("Enable Authenticator App")}.',
-    'Type your Discord password.',
-    f'Click {ui("Continue")}.',
     'Open the authenticator app on your phone.',
     'Use the app to scan the QR code that Discord shows.',
     'Type the 6-digit code from the app into Discord.',
-    f'Click {ui("Activate")}.',
+    f'Click {ui("Activate")} and enter your Discord password if prompted.',
     f'Save your {T("backup codes")} by downloading them or writing them down, and keep them somewhere safe.',
 )}
 {result('Your account now asks for a 6-digit code from your phone whenever you log in on a new device.')}
@@ -1108,7 +1212,7 @@ STEPS = {
     f'Click {ui("Turn On Camera")} in the preview window.',
 )}
 {result('Your video appears in the call view for everyone in the voice channel. When the camera is off, teammates see your profile picture instead.')}
-{note(f'To turn your camera off, click the {ui("Video")} button again. To check your camera before a meeting, open {ui("User Settings")}, go to {ui("Voice &amp; Video")}, open the {ui("Video")} tab, and click {ui("Test Video")}.')}
+{note(f'To turn your camera off, click the {ui("Video")} button again. To check your camera before a meeting, open {ui("User Settings")}, click {ui("Camera")} under {ui("Voice &amp; Video")}, and click {ui("Test Video")}.')}
 ''',
     # ---------------- 7.2 Sharing Your Screen ----------------
     ('screen-share.html', 'Choosing a Window or Entire Screen'): f'''
@@ -1117,12 +1221,11 @@ STEPS = {
     'Join a voice channel. <a href="voice-video.html">Subsection 7.1</a> shows how.',
     'Close any windows or browser tabs that show private information, such as your email or bank account.',
     f'Click the {ui("Share Your Screen")} button (a monitor with an arrow) in the {VS}.',
-    f'Click the {ui("Applications")} tab to share one window, or the {ui("Screens")} tab to share everything on your monitor.',
+    f'Click the {ui("Applications")} tab to share one window, or the {ui("Entire Screen")} tab to share everything on your monitor.',
     'Click the window or screen you want to share.',
-    f'Click {ui("Go Live")}.',
 )}
 {result(f'A small preview of your share appears, and a red {ui("LIVE")} label appears next to your name in the voice channel. Teammates click your name to watch.')}
-{note(f'Leave the quality settings as they are unless your group asks you to change them. To share a video with sound, such as a clip in your slides, turn on the sound option before you click {ui("Go Live")}.')}
+{note(f'Leave the quality settings as they are unless your group asks you to change them. To share a video with sound, such as a clip in your slides, turn on the sound option before you start sharing.')}
 ''',
     ('screen-share.html', 'Stopping a Share'): f'''
 {steps(
@@ -1140,12 +1243,12 @@ STEPS = {
     f'If a red microphone icon appears next to your name under the voice channel, ask a {T("moderator")} to unmute you. This icon means a moderator muted you for the whole server, and you cannot unmute yourself.',
     GEAR,
     f'Click {ui("Voice &amp; Video")} in the list on the left.',
-    f'Click the {ui("Voice")} tab.',
-    f'Open the {ui("Input Device")} menu.',
+    f'Under {ui("Voice &amp; Video")}, click {ui("Voice")}.',
+    f'Open the {ui("Microphone")} menu.',
     'Click the microphone you are using.',
-    f'If the {ui("Input Volume")} slider is low, drag it to the right.',
-    f'If {ui("Input Mode")} is set to {ui("Push to Talk")}, click {ui("Voice Activity")}. With Push to Talk, Discord only sends your voice while you hold down a key.',
-    f'Under {ui("Mic Test")}, click {ui("Let\'s Check")}.',
+    f'If the {ui("Microphone Volume")} slider is low, drag it to the right.',
+    f'If {ui("Input Mode")} is set to {ui("Push to Talk")}, then turn it off.',
+    f'Click {ui("Mic Test")}.',
     'Speak into your microphone. If the bar moves and you hear yourself, your microphone works.',
     f'Click {ui("Stop Testing")}.',
 )}
@@ -1154,7 +1257,7 @@ STEPS = {
     f'Press {kbd("Windows")} + {kbd("I")} to open Windows Settings.',
     f'Click {ui("Privacy &amp; security")}.',
     f'Click {ui("Microphone")}.',
-    f'Turn on {ui("Let desktop apps access your microphone")}.',
+    f'Turn on {ui("Let desktop apps access your microphone")}. If Discord isn\'t automatically switched on, click the switch for Discord as well.',
 )}
 {result('Your group can hear you, and a green ring appears around your picture when you talk.')}
 {note('If you run the Mic Test while you are in a voice channel, Discord mutes and deafens you until you click Stop Testing.')}
@@ -1167,9 +1270,9 @@ STEPS = {
     f'If {ui("Mute")} is checked, click it to uncheck it.',
     GEAR,
     f'Click {ui("Voice &amp; Video")} in the list on the left.',
-    f'Open the {ui("Output Device")} menu.',
+    f'Open the {ui("Speaker")} menu.',
     'Click the speakers or headphones you are using.',
-    f'If the {ui("Output Volume")} slider is low, drag it to the right.',
+    f'If the {ui("Speaker Volume")} slider is low, drag it to the right.',
     'Click the speaker icon at the bottom-right of the Windows taskbar.',
     'If the volume is low or muted, drag the volume slider to the right.',
 )}
@@ -1180,7 +1283,7 @@ STEPS = {
     'Close other apps that may be using your camera, such as Zoom, Microsoft Teams, or the Windows Camera app.',
     GEAR,
     f'Click {ui("Voice &amp; Video")} in the list on the left.',
-    f'Click the {ui("Video")} tab.',
+    f'Under {ui("Voice &amp; Video")}, click {ui("Camera")}.',
     f'Open the {ui("Camera")} menu.',
     'Click the camera you are using.',
     f'Click {ui("Test Video")} to check that your picture appears.',
@@ -1208,19 +1311,18 @@ STEPS = {
     f'If a {T("category")} name in the channel list has an arrow pointing right, click the name to show the channels under it.',
     'Click the server name at the top of the channel list.',
     f'If {ui("Hide Muted Channels")} is checked, click it to show muted channels again.',
-    f'If the top of the channel list shows {ui("Channels &amp; Roles")} or {ui("Browse Channels")}, click it.',
-    'Turn on the channel you need.',
-    f'If the channel is still missing, send a short message to a moderator asking for the {T("role")} that can see it, such as "Hi, I am in Group 3. Could you give me the @Group 3 role so I can see our channel?"',
+    'Right click the greyed out channel.',
+    f'Click {ui("Unmute Channel")}.',
 )}
 {result('The channel appears in your channel list.')}
+{note(f'If the channel is still missing, ask a {T("moderator")} for help. You may need a {T("role")} that can see the channel. For example: "Hi, I am in Group 3. Could you give me the @Group 3 role so I can see our channel?"')}
 ''',
     ('channel-invite-problems.html', 'An Invite Link Does Not Work'): f'''
 {steps(
     'Check the name in the user panel to make sure you are logged in to the right Discord account.',
-    'Copy the whole invite link again. It should start with <strong>discord.gg/</strong> and have no spaces before or after it.',
     f'In Discord, click the plus button ({ui("Add a Server")}) in the server list.',
     f'Click {ui("Join a Server")}.',
-    f'Paste the link into the {ui("Invite Link")} box.',
+    f'Copy the whole invite link again, and paste it into the {ui("Invite Link")} box. It should start with <strong>discord.gg/</strong> and have no spaces before or after it.',
     f'Click {ui("Join Server")}.',
     'If Discord says the invite is invalid or expired, ask your group for a new link that is set to never expire.',
 )}
@@ -1233,10 +1335,9 @@ STEPS = {
 {steps(
     'Check the pinned messages in your server first. <a href="missed-messages.html">Subsection 5.3</a> shows how. Your group may have already posted the answer.',
     'Open the window that shows the problem.',
-    f'Press {kbd("Windows")} + {kbd("Shift")} + {kbd("S")}.',
-    'Drag a box around the part of the screen that shows the problem. Windows copies the screenshot.',
+    f'Press {kbd("Windows")} + {kbd("Shift")} + {kbd("S")}, and then drag a box around the part of the screen that shows the problem. Windows copies the screenshot.',
     'Open the channel your server uses for questions, such as <strong>#help</strong> or <strong>#questions</strong>. If there is none, use the main chat channel.',
-    'Type a short description: what you were trying to do, what happened, and what you already tried. For example: "I cannot hear anyone in Meeting Room. I already checked my Output Device and my headphones are not deafened."',
+    'Type a short description: what you were trying to do, what happened, and what you already tried. For example: "I cannot hear anyone in Meeting Room. I already checked my Input/Output Device and my headphones are not deafened."',
     f'Press {kbd("Ctrl")} + {kbd("V")} to add your screenshot to the message.',
     f'Press {kbd("Enter")}.',
     'When the problem is fixed, reply to say what worked, so the next person with the same problem can find the answer.',
@@ -1244,6 +1345,93 @@ STEPS = {
 {result('Your question and screenshot appear in the channel, and teammates or moderators can reply with a fix.')}
 {caution('Before posting a screenshot, check that it does not show private information, such as your email address, grades, or other open messages.')}
 {note('For account problems your server cannot fix, such as a hacked account or a login error, visit the <a href="https://support.discord.com">Discord Help Center</a>.')}
+''',
+    ('meeting-etiquette.html', 'Before the Call'): '''<ul>
+  <li>Review the project goals and agenda so everyone knows what needs to be discussed.</li>
+  <li>Read any shared documents, messages, or updates before joining.</li>
+  <li>Make sure your microphone, headphones, and internet connection are working properly.</li>
+  <li>Join the call on time and be ready to participate.</li>
+  <li>Prepare any questions, ideas, or progress updates you want to share.</li>
+  <li>Close unnecessary apps or browser tabs that could distract you during the meeting.</li>
+</ul>''',
+    ('meeting-etiquette.html', 'During the Call'): '''<ul>
+  <li>Mute your microphone when you are not speaking to reduce background noise.</li>
+  <li>Listen carefully and avoid interrupting other group members.</li>
+  <li>Stay focused on the project topic and avoid unrelated conversations.</li>
+  <li>Use respectful language and give everyone a chance to contribute.</li>
+  <li>Take notes on important decisions, tasks, and deadlines.</li>
+  <li>Ask questions if something is unclear instead of making assumptions.</li>
+  <li>Confirm action items before the meeting ends so everyone understands their responsibilities.</li>
+  <li>Thank your teammates for their time and contributions before leaving the call.</li>
+</ul>''',
+    ('checklist.html', 'Core Skills Checklist'): '''<p>Check off each skill as you practice it. Your checks are not saved, so use this list as a quick review before your next group meeting.</p>
+<h3>Server Navigation</h3>
+<ul class="checklist">
+  <li><label><input type="checkbox" id="ck1"> <span>Join a Discord server using an invite link.</span></label></li>
+  <li><label><input type="checkbox" id="ck2"> <span>Identify categories and channels within a server.</span></label></li>
+  <li><label><input type="checkbox" id="ck3"> <span>Navigate between text and voice channels.</span></label></li>
+  <li><label><input type="checkbox" id="ck4"> <span>Locate important server information and announcements.</span></label></li>
+</ul>
+<h3>Communication</h3>
+<ul class="checklist">
+  <li><label><input type="checkbox" id="ck5"> <span>Send messages in a text channel.</span></label></li>
+  <li><label><input type="checkbox" id="ck6"> <span>Reply to messages in a conversation.</span></label></li>
+  <li><label><input type="checkbox" id="ck7"> <span>Use emoji reactions appropriately.</span></label></li>
+  <li><label><input type="checkbox" id="ck8"> <span>Mention users with @mentions.</span></label></li>
+  <li><label><input type="checkbox" id="ck9"> <span>Follow proper Discord etiquette when communicating.</span></label></li>
+</ul>
+<h3>Direct Messages &amp; Friends</h3>
+<ul class="checklist">
+  <li><label><input type="checkbox" id="ck10"> <span>Send a friend request.</span></label></li>
+  <li><label><input type="checkbox" id="ck11"> <span>Accept or decline friend requests.</span></label></li>
+  <li><label><input type="checkbox" id="ck12"> <span>Start and manage direct message conversations.</span></label></li>
+  <li><label><input type="checkbox" id="ck13"> <span>Create and use group direct messages.</span></label></li>
+</ul>
+<h3>Voice &amp; Video Features</h3>
+<ul class="checklist">
+  <li><label><input type="checkbox" id="ck14"> <span>Join a voice channel.</span></label></li>
+  <li><label><input type="checkbox" id="ck15"> <span>Mute and unmute your microphone.</span></label></li>
+  <li><label><input type="checkbox" id="ck16"> <span>Deafen and undeafen yourself.</span></label></li>
+  <li><label><input type="checkbox" id="ck17"> <span>Enable and disable your camera.</span></label></li>
+  <li><label><input type="checkbox" id="ck18"> <span>Leave a voice channel correctly.</span></label></li>
+</ul>
+<h3>Screen Sharing &amp; Collaboration</h3>
+<ul class="checklist">
+  <li><label><input type="checkbox" id="ck19"> <span>Share your screen during a voice call.</span></label></li>
+  <li><label><input type="checkbox" id="ck20"> <span>Select the correct application or window to share.</span></label></li>
+  <li><label><input type="checkbox" id="ck21"> <span>Participate in study sessions or group discussions.</span></label></li>
+  <li><label><input type="checkbox" id="ck22"> <span>Collaborate effectively during project meetings.</span></label></li>
+</ul>
+<h3>Account &amp; Profile Management</h3>
+<ul class="checklist">
+  <li><label><input type="checkbox" id="ck23"> <span>Update your username or display name.</span></label></li>
+  <li><label><input type="checkbox" id="ck24"> <span>Modify your profile settings.</span></label></li>
+  <li><label><input type="checkbox" id="ck25"> <span>Adjust notification preferences.</span></label></li>
+  <li><label><input type="checkbox" id="ck26"> <span>Review Discord privacy and safety settings.</span></label></li>
+</ul>
+<h3>Organization &amp; Productivity</h3>
+<ul class="checklist">
+  <li><label><input type="checkbox" id="ck27"> <span>Use Discord to communicate with classmates.</span></label></li>
+  <li><label><input type="checkbox" id="ck28"> <span>Participate in course-related servers.</span></label></li>
+  <li><label><input type="checkbox" id="ck29"> <span>Follow channel rules and guidelines.</span></label></li>
+  <li><label><input type="checkbox" id="ck30"> <span>Keep project discussions organized in appropriate channels.</span></label></li>
+  <li><label><input type="checkbox" id="ck31"> <span>Use Discord professionally in academic environments.</span></label></li>
+</ul>
+''',
+    ('beyond.html', 'Student Organizations and Future Classes'): f'''<p>Your group project is only the start. Student organizations and future classes at UCF may also invite you to a Discord server, and every skill you practiced here works the same way there.</p>
+<h3>Finding a student organization</h3>
+<p><a href="https://osi.ucf.edu/registered-student-organizations-rsos/get-involved/">KnightConnect</a> is UCF's official involvement platform, where you can explore over 600 Registered Student Organizations and view upcoming events. Each organization has its own page with meeting times, contact information, and ways to get involved. Log in with your NID and NID password to see every organization, as the <a href="https://osi.ucf.edu/rso/">Office of Student Involvement</a> explains.</p>
+<p>If a club you join uses Discord, ask an officer for the invite link, and then join the server the same way you joined your group's server in <a href="accept-invite.html">Subsection 3.2</a>.</p>
+<h3>Using your skills in a new server</h3>
+<ul>
+  <li><strong>Set a nickname:</strong> Use a <a href="server-nickname.html">server nickname</a> with your real name in class servers, and a different one in hobby clubs if you want.</li>
+  <li><strong>Control your alerts:</strong> Clubs can be busy. Set each new server to <strong>Only @mentions</strong> in <a href="notifications.html">Subsection 6.1</a> so club chat does not bury class deadlines.</li>
+  <li><strong>Read the rules first:</strong> Most servers have a rules or announcements channel. Read it before you post, just like you check pinned messages in <a href="missed-messages.html">Subsection 5.3</a>.</li>
+  <li><strong>Use the same meeting habits:</strong> The etiquette in <a href="meeting-etiquette.html">Subsection 7.3</a> works for club meetings, study sessions, and officer calls.</li>
+  <li><strong>Protect your privacy:</strong> Large servers include people you do not know. Keep the message and friend request limits from <a href="privacy-security.html">Subsection 6.2</a> turned on.</li>
+</ul>
+<h3>Future classes</h3>
+<p>When a new professor or project group invites you to a Discord server, you do not need to start over. You already know how to join from an invite link, find the right channel, mention a teammate, share a file, and join a meeting. When a semester ends, you can leave servers you no longer need so your server list stays short and easy to read.</p>
 ''',
 }
 
@@ -1262,8 +1450,41 @@ gloss = ''.join(
     for k, v in sorted(DEF.items(), key=lambda kv: kv[0].lower()))
 PAGES['glossary.html'] = ('Plain-language definitions of every new Discord word in this tutorial.', f'''
 <p class="lead">This glossary defines every new word in this tutorial in alphabetical order. The same definitions appear when you point to a blue word on any page.</p>
-<p>More words will be added as the remaining sections are written.</p>
 <dl class="glossary">{gloss}</dl>
+''')
+
+PAGES['final-conclusion.html'] = ('Congratulations on finishing the tutorial, plus official Discord help links for later.', f'''
+<p class="lead">Congratulations. You finished {TITLE}, and you are ready to use Discord with your class or group.</p>
+<p>You can now create an account, join your group's server, find the right channels, send messages and files, control your notifications and privacy, join voice meetings, share your screen, and fix common problems on your own.</p>
+
+<h2>More information in this tutorial</h2>
+<ul>
+  <li><a href="checklist.html">Subsection 8.1: Quick-Start Checklist</a>: Review every core skill in one list.</li>
+  <li><a href="troubleshooting.html">Section 9: Troubleshooting Common Problems</a>: Find a fix by problem.</li>
+  <li><a href="glossary.html">Section 11: Glossary</a>: Look up any new word from this tutorial.</li>
+</ul>
+
+<h2>Discord Help Center</h2>
+<p>For anything this tutorial does not cover, visit the <a href="https://support.discord.com">Discord Help Center</a>. It is Discord's official support site, and you can search it for any feature, setting, or error message.</p>
+
+<h2>Official Discord help links</h2>
+<ul class="link-list">
+  <li><a href="https://support.discord.com">Discord Help Center</a>: The official home of every Discord help article. Search it for any feature or error message.</li>
+  <li><a href="https://support.discord.com/hc/en-us/articles/360045138571-Beginner-s-Guide-to-Discord">Beginner's Guide to Discord</a>: An overview of accounts, servers, text and voice channels, screen sharing, and profiles.</li>
+  <li><a href="https://support.discord.com/hc/en-us/articles/215253258-Notifications-Settings-101">Notifications Settings 101</a>: Every server and channel notification option, including muting and @mention settings.</li>
+  <li><a href="https://support.discord.com/hc/en-us/articles/219576828-Setting-up-Multi-Factor-Authentication">Setting up Multi-Factor Authentication</a>: How to protect your login with an authenticator app, passkeys, or security keys.</li>
+  <li><a href="https://support.discord.com/hc/en-us/articles/360040816151-Go-Live-and-Screen-Share">Go Live and Screen Share</a>: How to share one window or your entire screen in a voice channel.</li>
+  <li><a href="https://support.discord.com/hc/en-us/articles/360045138471-Discord-Voice-and-Video-Troubleshooting-Guide">Discord Voice and Video Troubleshooting Guide</a>: More fixes for microphone, speaker, and camera problems.</li>
+  <li><a href="https://discord.com/safety/360043857751-four-steps-to-a-super-safe-account">Four Steps to a Safer Account</a>: Discord's Safety Center guide to passwords, privacy settings, and blocking.</li>
+</ul>
+''')
+
+PAGES['credits.html'] = ('The sources and tools used to make this tutorial.', '''
+<ul>
+  <li><a href="https://support.discord.com">Discord Help Center</a> was used to check features and button names.</li>
+  <li>Screenshots are original and were captured and annotated by Sebastian Foster with Windows Snipping Tool and Google Drawings.</li>
+  <li>Discord Dark theme obtained by copying hex codes from the appearance settings in the app.</li>
+</ul>
 ''')
 
 # ---------------------------------------------------------------------------
@@ -1280,7 +1501,7 @@ if __name__ == '__main__':
         with open(f, 'w', encoding='utf-8') as fh:
             fh.write(page(f, body, desc, draft))
     # Old addresses from the first draft redirect to the new pages
-    for old, new in {'create-account.html': 'getting-started.html', 'join-server.html': 'joining-a-server.html', 'what-is-discord.html': 'introduction.html'}.items():
+    for old, new in {'create-account.html': 'getting-started.html', 'join-server.html': 'joining-a-server.html', 'what-is-discord.html': 'index.html', 'introduction.html': 'index.html'}.items():
         with open(old, 'w', encoding='utf-8') as fh:
             fh.write(f'<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url={new}">'
                      f'<link rel="canonical" href="{new}"><title>Moved</title></head><body><p>This page moved to <a href="{new}">{new}</a>.</p></body></html>')
