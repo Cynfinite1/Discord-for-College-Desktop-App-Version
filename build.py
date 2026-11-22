@@ -1496,19 +1496,38 @@ PAGES['credits.html'] = ('The sources and tools used to make this tutorial.', ''
 # ---------------------------------------------------------------------------
 # Write files
 # ---------------------------------------------------------------------------
+def new_name(num, title, parent):
+    """File names follow the section numbering, such as Section-1-About-This-Tutorial.html."""
+    if not num:
+        return 'Home.html'
+    words = re.sub(r'[^A-Za-z0-9 -]', '', title).split()
+    kind = 'Section' if parent is None else 'Subsection'
+    return f'{kind}-{num}-' + '-'.join(words) + '.html'
+
+
+def redirect(new):
+    return (f'<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url={new}">'
+            f'<link rel="canonical" href="{new}"><title>Moved</title></head><body><p>This page moved to <a href="{new}">{new}</a>.</p></body></html>')
+
+
 if __name__ == '__main__':
     for f in glob.glob('*.html'):
         os.remove(f)
+    NEW = {f: new_name(num, title, parent) for num, f, title, parent in ORDER}
+    link_re = re.compile(r'href="(' + '|'.join(re.escape(k) for k in NEW) + r')(#[^"]*)?"')
     for num, f, title, *_ in ORDER:
         entry = PAGES[f]
         desc, body = entry[0], entry[1]
         draft = len(entry) > 2 and entry[2]
         body = number_media(body, num)
-        with open(f, 'w', encoding='utf-8') as fh:
-            fh.write(page(f, body, desc, draft))
-    # Old addresses from the first draft redirect to the new pages
-    for old, new in {'create-account.html': 'getting-started.html', 'join-server.html': 'joining-a-server.html', 'what-is-discord.html': 'index.html', 'introduction.html': 'index.html'}.items():
-        with open(old, 'w', encoding='utf-8') as fh:
-            fh.write(f'<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url={new}">'
-                     f'<link rel="canonical" href="{new}"><title>Moved</title></head><body><p>This page moved to <a href="{new}">{new}</a>.</p></body></html>')
+        out = link_re.sub(lambda m: f'href="{NEW[m.group(1)]}{m.group(2) or ""}"', page(f, body, desc, draft))
+        with open(NEW[f], 'w', encoding='utf-8') as fh:
+            fh.write(out)
+    # The site's front page must be index.html, and old addresses redirect to the renamed pages
+    old = {f: n for f, n in NEW.items()}
+    old.update({'create-account.html': NEW['getting-started.html'], 'join-server.html': NEW['joining-a-server.html'],
+                'what-is-discord.html': 'Home.html', 'introduction.html': 'Home.html'})
+    for o, n in old.items():
+        with open(o, 'w', encoding='utf-8') as fh:
+            fh.write(redirect(n))
     print('Built', len(ORDER), 'pages')
