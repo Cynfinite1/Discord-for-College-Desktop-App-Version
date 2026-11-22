@@ -1489,7 +1489,7 @@ PAGES['credits.html'] = ('The sources and tools used to make this tutorial.', ''
   <li><a href="https://support.discord.com">Discord Help Center</a> was used to verify any recent changes in button names, menus, or UIs.</li>
   <li>Both Discord accounts were made and used by Sebastian Foster for steps that require another user.</li>
   <li>Screenshots are original and were captured and annotated by Sebastian Foster with the Windows Snipping Tool and Google Drawings.</li>
-  <li>The Discord Dark theme colors were obtained by copying hex codes from the appearance settings in the app.</li>
+  <li>The Discord Dark theme colors were obtained by copying hex codes from the appearance settings in the app. Discord's Blurple (#5865F2), the color of the circle in the Discord logo, was used for the title and the Table of Contents heading. Other colors were chosen by copying hex codes from Discord's Nitro color picker feature.</li>
 </ul>
 ''')
 

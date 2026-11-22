@@ -212,3 +212,5 @@ a.media-frame:hover { border-color: var(--blurple); }
 .steps-grid .step-media { margin-top: .8rem; }
 .steps-grid .media { margin: 0 auto .3rem; max-width: 720px; }
 .pager a span { color: var(--heading); }
+/* Discord Blurple (logo circle) for the site title and TOC heading */
+.brand, .toc-title, h1.home-title { color: var(--blurple); }
